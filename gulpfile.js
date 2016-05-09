@@ -10,6 +10,8 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var sass = require('gulp-ruby-sass');
+var imagemin = require('gulp-imagemin');
+var cache = require('gulp-cache');
 
 // Concatenate & minify  JS files
 gulp.task('scripts', function() {
@@ -35,6 +37,17 @@ gulp.task('watch', function() {
 	gulp.watch(src + 'scss/*.scss', ['sass']);
 });
 
+// copy and minify images
+gulp.task('images', function(){
+	return gulp.src('src/img/**/*.+(png|jpg|jpeg|gif|svg)')
+	// caching images that ran through imagemin
+	.pipe(cache(imagemin({
+		interlaced: true
+	})))
+	.pipe(gulp.dest('build/img'))
+});
+
+
 // Copy index.html to build
 /*
 gulp.task('copy-index', function() {
@@ -43,5 +56,5 @@ gulp.task('copy-index', function() {
 });
 */
 // Default Task
-gulp.task('default', ['scripts', 'sass', 'copy-index']);
+gulp.task('default', ['scripts', 'sass', 'images']);
 

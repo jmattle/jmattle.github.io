@@ -4,6 +4,8 @@ body {
 }
 .algolia-autocomplete {
   width: 50%;
+  bottom: 32px;
+  margin: 5px;
 }
 .algolia-autocomplete .aa-input, .algolia-autocomplete .aa-hint {
   width: 100%;
@@ -71,4 +73,23 @@ body {
 .search-box:focus {
   box-shadow: 0 0 10px 2px #b0e0ee;
   border: 1px solid #bebede;
+}
+.header {
+  background-color: #003b64;
+  border-radius: 5px;
+}
+.bestbuy-logo {
+  width: 90px;
+  height: 70px;
+  display: inline-block;
+  position: relative;
+  top: 7px;
+}
+.title {
+  font-weight: 300;
+  display: inline-block;
+  font-size: 20px;
+  position: relative;
+  bottom: 25px;
+  color: white;
 }

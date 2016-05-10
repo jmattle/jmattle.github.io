@@ -15,6 +15,9 @@ var cache = require('gulp-cache');
 
 // Concatenate & minify  JS files
 gulp.task('scripts', function() {
+	// copy main file for reference...
+	gulp.src('src/js/app.js')
+        .pipe(gulp.dest('build/js'));
 	return gulp.src('src/js/*.js')
 		.pipe(concat('main.js'))
 			.pipe(rename({suffix: '.min'}))
@@ -27,6 +30,12 @@ gulp.task('sass', function() {
 	return sass('src/scss/style.scss', {style: 'compressed'})
 		.pipe(rename({suffix: '.min'}))
 		.pipe(gulp.dest('build/css'));
+});
+
+// font awesome
+gulp.task('icons', function() {
+	return gulp.src('src/scss/font-awesome/fonts/**.*')
+		.pipe(gulp.dest('build/fonts'));
 });
 
 // Watch for changes in files
@@ -56,5 +65,5 @@ gulp.task('copy-index', function() {
 });
 */
 // Default Task
-gulp.task('default', ['scripts', 'sass', 'images']);
+gulp.task('default', ['scripts', 'sass', 'images', 'icons']);
 

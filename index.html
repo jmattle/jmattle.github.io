@@ -5,22 +5,42 @@
   <title>Justin Mattle Algolia Technical Test</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+  <!--  <link rel="stylesheet" href="build/fonts/font-awesome.min.css"> -->
   <link rel="stylesheet" href="build/css/style.min.css">
 </head>
 
 <body>
   <div class="header">
     <img class="bestbuy-logo" src="build/img/bestbuy_logo.png">
-    <h2 class="title">BestBuy Auto-completion</h2>
-    <input id="search-input" type="text" name="focus" required class="search-box" placeholder="Enter search term" />
+    <h2 class="title">Best Buy Auto-completion</h2>
+    <input id="search_input" type="text" name="focus" required class="search-box" placeholder="Enter search term" />
+    <button id="clear_input" class="close-icon fa fa-times" type="reset"></button>
+    <div id="clear_product" class="clear-product"><p>Clear Product<p></div>
   </div>
 
+  <div class="selection-wrapper">
+    <div class="breadcrumb"></div>
+    <div class="image-wrapper">
+      <img class="image" src="">
+    </div>
+    <div class="product-info-wrapper">
+      <div class="brand"></div>
+      <div class="name"></div>
+      <div class="price"></div>
+      <div class="buy-btn" href=""><a href="">Buy Now</a></div>
+      <div class="shipping"></div>
+      <div class="description"></div>
+    </div>
+  </div>
+
+  <!-- Load Scripts -->
   <script src="http://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
   <script src="http://cdn.jsdelivr.net/hogan.js/3.0/hogan.min.js"></script>
   <script src="http://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
   <script src="http://cdn.jsdelivr.net/jquery/2.1.4/jquery.min.js"></script>
   
   <script src="build/js/main.min.js"></script>
+  <!-- <script src="build/js/app.js"></script> -->
 </body>
 </html>
 

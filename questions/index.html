@@ -1,19 +1,180 @@
 <!doctype html>
 
 <html lang="en">
+
+<style type="text/css">
+  #exTab2 h3 {
+    padding : 5px 15px;
+  }
+
+  .success {
+    background-color: #d6e9c6;
+  }
+
+  .answer-title {
+    color: #3c763d;
+  }
+
+  .answer-well {
+    background: #dff0d8 !important;
+  }
+</style>
+
 <head>
-  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <title>Justin Mattle Algolia Technical Test Questions</title>
   <meta charset="utf-8">
 </head>
 
 <body>
   <div>
-    <h1>Hello World</h1>
+    <h3 style="margin: 25px 0 15px 25px;">Click on the tabs to see each question/answer:</h3>
+    
+    <div id="exTab2" class="container"> 
+      <ul class="nav nav-tabs">
+        <li class="active"><a  href="#Q1" data-toggle="tab">Q.1</a></li>
+        <li><a href="#Q2" data-toggle="tab">Q.2</a></li>
+        <li><a href="#Q3" data-toggle="tab">Q.3</a></li>
+        <li><a href="#Q4" data-toggle="tab">Q.4</a></li>
+      </ul>
+
+      <div class="tab-content ">
+        <div class="tab-pane active" id="Q1">
+          <h4>Question:</h4>
+          <p class="well">
+            Hi there,<br/>
+            I'd like to built an autocomplete search like on https://glose.com/bookstore. How can I build that kind of search using my PHP backend?<br/>
+            Looking forward to hearing from you soon.<br/>
+            Cheers,<br/>
+            Jason</p>
+            <br/>
+            <h4 class="answer-title">Answer:</h4>
+            <p class="well answer-well">Hi Jason,
+            Thanks for your interest in using Algolia’s autocomplete search, it’s very easy to both set up and use! You can build that kind of search by using our Search API. We have thorough online documentation that will guide you through the process, provided in the links below:
+            <br/>
+            <br/>
+            - <a href="https://www.algolia.com/doc/search/auto-complete">How to use Algolia Search API in PHP</a>
+            <br/>
+            - <a href="https://www.algolia.com/doc/php#setup">Tutorial on how to use Autocomplete Search</a>
+            <br/>
+            <br/>
+            Please let me know if you have any questions about the online guides or anything else at all, I’m happy to help get you started!
+            <br/>
+            <br/>
+            Thanks,
+            Justin
+          </p>
+        </div>
+        <div class="tab-pane" id="Q2">
+          <h4>Question:</h4>
+          <p class="well">Hey<br/>
+             We currently use swiftype. I'd like to learn what the main differences with respect to that.<br/>
+             Thanks. Hugo.
+          </p>
+
+          <h4 class="answer-title">Answer:</h4>
+          <p class="well answer-well">
+          Hi Hugo,<br/>
+          Thanks for your interest in Algolia! While we share some similarities with Swiftype, one of the main differences that sets us apart from them is that instead of using a web crawler based on older, existing technology to build an online index of your site (which is a large and complex task), Algolia builds an index of your site from data pushed to us directly from you (either through our online dashboard or our REST API). Algolia's engine was built from the ground-up by our engineers, giving us full control and flexibility of indexing and search. By using our method, the search task is much simpler and provides higher performance and more intelligent advantages of a full in-house search engine operating on your back-end database. This allows Algolia’s search response speed to to be significantly faster since it’s searching a single site rather than the entire web. Algolia searches are also  smarter and more site specific than a generalized web text search.
+          <br/>
+          <br/>
+          Another feature that sets Algolia apart is our dedication to speed by optimizing for every millisecond, from how the engine works to our infrastructure. We are the only search provider to propose a Distributed Search Network (DSN) with 14 worldwide locations. DSN enables you to automatically duplicate your search engine and your data in multiple locations around the world (this is a complete copy of the search engine with all data, not just a cache). This way, when one of your users searches for something, the query will be sent to the closest datacenter, which will greatly reduce the latency.
+          <br/>
+          <br/>
+          These differences are among the many of our rich feature set. If you have any more specific questions please let me know, I would be happy to answer them or set up a call to discuss more about using our product.
+          <br/>
+          <br/>
+          Thanks,
+          Justin
+          </p>
+        </div>
+        <div class="tab-pane" id="Q3">
+          <h4>Question:</h4>
+          <p class="well">
+          Hello.<br/>
+          Sorry to give you the kind of feedback that I know you do not want to
+          hear, but I really hate the new design. Clearing and deleting indexes
+          are now several clicks away. I am needing to use these features while
+          iterating, so this is inconvenient.<br/>
+          Also it would be great to access to export Analytics data to a CSV or to access them via an API.
+          Regards,<br/>
+          Matt  
+          </p>
+
+          <h4 class="answer-title">Answer:</h4>
+          <p class="well answer-well">
+          Hi Matt,
+          Thank you very much for your feedback - our customers are important to us and we value any input you may have so that we can make Algolia the best experience possible for everyone. I can understand your frustration and I’ll take your feedback directly to our Engineering and Design teams.
+          <br/>
+          <br/>
+          Regarding accessing Analytics data:
+          <br/>
+          - You can export the data from any table to a CSV by clicking on the “Download” button located at the bottom left corner of each table.<br/>
+          - Or you can access them by using our REST API directly (<a href="https://www.algolia.com/doc/rest#analytics-api">here is a link to documentation on using the Analytics API</a>).<br/>
+          <br/>
+          <br/>
+          If you have any more questions about accessing Analytics data please let me know, and thanks again for your feedback and using our product!
+          <br/>
+          Justin
+          </p>
+        </div>
+        <div class="tab-pane" id="Q4">
+          <h4>Question:</h4>
+          <p class="well">
+          Hi we are looking at Algolia as an option to replace our CloudSearch. After looking at your pricing and documentation, I have a few questions about pricing and search
+          <br/>
+          <br/>
+          1. We have three domains right now that contain different data. Would we be able to use a single Algolia account with different endpoints for each of those domains? For example, if we have less than 1M documents across the three domains, can we use a single Growth account?
+          <br/>
+          <br/>
+          2. We have a staging environment that also has three domains. The size of our data in the staging environment is fairly close to production to test performance in a realistic way. Queries per second is obviously much, much lower. What is the pricing for a non-production environment?
+          <br/>
+          <br/>
+          3. Does filtering on facets restrict the documents returned or the facets returned?
+          <br/>
+          <br/>
+          4. If the answer to 3 is documents, can we filter on facets using ranges? Or alternatively, can we provide arrays for faceted attributes where we can return the document if any of the values in the array match the filter (similar to querying against array fields in MongoDB)? As an example scenario, we have categories containing sub-categories which contain products. When in the parent category, we need to be able to search products in all of its sub-categories. In the sub-categories, we need to be able to search products in only that sub-category.
+          Let me know if anything is unclear. It looks like a great product so I'm excited to hear back!
+          </p>
+          <h4 class="answer-title">Answer:</h4>
+          <p class="well answer-well">
+          Hi, thank you for your interest in Algolia! Please see my responses to your questions below highlighted in red.
+          <br/>
+          <br/>
+          Please let me know if anything remains unclear or unquestioned and I will be happy to help you out as soon as possible, and if you’d like to schedule a call to discuss further let me know. Thanks for your interest in Algolia and I hope to hear from you soon!
+          Justin
+          <br/>
+          <br/>
+          <i>1. We have three domains right now that contain different data. Would we be able to use a single Algolia account with different endpoints for each of those domains? For example, if we have less than 1M documents across the three domains, can we use a single Growth account?</i>
+          <br/>
+          <font color="red">[JM] - Yes, you would be able to use your three domains under a single Growth account. In fact, there is no limitation to the amount of domains you can have.</font>
+          <br/>
+          <br/>
+          <i>2. We have a staging environment that also has three domains. The size of our data in the staging environment is fairly close to production to test performance in a realistic way. Queries per second is obviously much, much lower. What is the pricing for a non-production environment?</i>
+          <br/>
+          <font color="red">[JM] - Pricing is the same for both production and non-production environments. In order to provide the same performance on features on non-production environments, we need to use the same hardware setup and so a discount is not possible for this.</font>
+          <br/>
+          <br/>
+          <i>3. Does filtering on facets restrict the documents returned or the facets returned?</i>
+          <br/>
+          <font color="red">[JM] - Filtering on facets will restrict on documents.</font>
+          <br/>
+          <br/>
+          <i>4. If the answer to 3 is documents, can we filter on facets using ranges? Or alternatively, can we provide arrays for faceted attributes where we can return the document if any of the values in the array match the filter (similar to querying against array fields in MongoDB)? As an example scenario, we have categories containing sub-categories which contain products. When in the parent category, we need to be able to search products in all of its sub-categories. In the sub-categories, we need to be able to search products in only that sub-category.
+          Let me know if anything is unclear. It looks like a great product so I'm excited to hear back!</i>
+          <br/>
+          <font color="red">[JM] -You cannot filter over facets using ranges; however, you can filter over numeric and date attributes with math operations such as “<“,”>”,”=“,”<=“,”>=“.  And yes, arrays are accepted for faceted attributes.
+          Regarding your example scenario, you can achieve your desired results by using the <a href="https://github.com/algolia/algoliasearch-helper-js#filtering-results">algoliasearch-helper-js</a> library to specify a rootPath from where you would like to start filtering hierarchical values. The link to the library github page provided will give more explanation on using these faceting features and show code examples of how to use them.</font>
+          </p>
+        </div>
+      </div>
+  </div>
+
+
   </div>
   <!-- Load Scripts -->
-  <script src="//cdn.jsdelivr.net/jquery/2.1.4/jquery.min.js"></script>
-  <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  <script src="http://cdn.jsdelivr.net/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 </body>
 </html>
 
